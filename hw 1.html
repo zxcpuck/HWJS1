@@ -6,7 +6,7 @@
 </head>
 <body>
 
-
+<div id = "welcome"></div>
 <script>
     let var1 = "hello"
     let var2 = "owu"
@@ -37,17 +37,12 @@
     console.log(var13)
 
 
-
     let person = {
-        firstName : 'Mark',
-        middleName : 'Svystun',
-        lastName : 'Mukolayovich'
+        firstName: 'Mark',
+        middleName: 'Svystun',
+        lastName: 'Mukolayovich'
     }
     console.log(person)
-
-
-
-
 
 
     let a = 100
@@ -58,6 +53,17 @@
 
     let c = true
     console.log(typeof c)
+
+    const name = prompt('Будь - ласка введіть ваше ім\'я!');
+    const secondName = prompt ('Як вас звати по батькові - ?')
+    const age = prompt('Скільки вам років - ?')
+        if (name) {
+            document.querySelector('#welcome').innerHTML = `Вітаємо вас <b>${name}</b> <b>${secondName}</b>, вам : <b>${age} років</b> - вітаю вас на сайті!`;
+    }
+        else {
+            document.querySelector('#welcome').innerHTML = '<b>Гість</b>, вітаю вас на сайті!';
+    }
+
 </script>
 </body>
 </html>
